@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Vigilância e Monitoramento",
+        "description": [
+            "Ofereço serviços de vigilância e monitoramento discreto para ajudar a obter as informações de que você precisa. Utilizando técnicas avançadas e equipamentos especializados, posso acompanhar pessoas ou atividades de interesse, fornecendo relatórios detalhados para embasar suas decisões."
+        ]
+    },
+    
+    {
+        "name": "Investigação Pessoal",
+        "description": [
+            "Minha experiência inclui investigações pessoais em uma variedade de áreas, incluindo a localização de pessoas desaparecidas, verificação de antecedentes e monitoramento de atividades suspeitas. Seja qual for a sua preocupação pessoal, estou aqui para oferecer assistência confiável e discreta."
+        ]
+    },
+    
+    {
+        "name": "Localização de Pessoas",
+        "description": [
+            "Se você precisa encontrar um ente querido desaparecido, um devedor em fuga ou qualquer outra pessoa importante em sua vida, estou aqui para ajudar. Utilizando métodos avançados de localização e investigação, posso ajudá-lo a reunir-se com a pessoa que você procura."
+        ]
+    },
+    
+    {
+        "name": "Investigação Empresarial",
+        "description": [
+            "Empresários e profissionais autônomos podem confiar em meus serviços de investigação empresarial para lidar com questões internas delicadas, como fraudes, roubo de propriedade intelectual e conduta antiética. Minha abordagem discreta e profissional garante resultados eficazes e confiáveis."
+        ]
+    },
+    
+    {
+        "name": "Levantamento de Informações",
+        "description": [
+            "Como investigador particular autônomo, estou disponível para realizar levantamentos de informações personalizados para atender às suas necessidades específicas. Seja para obter informações sobre concorrentes, clientes ou outros assuntos, estou aqui para ajudar a fornecer os dados necessários para embasar suas decisões."
+        ]
+    },
+    
+    {
+       "name":  "Provas para Advogados",
+       "description": [
+            "Advogados que necessitam de evidências sólidas e admissíveis em tribunal podem contar com meus serviços para obter as informações necessárias para seus casos. Trabalhando em estreita colaboração com advogados, posso fornecer relatórios detalhados e provas documentadas para fortalecer sua posição legal."
+        ]
+    },
+    
+    {
+        "name": "Localização de Animais Desaparecidos",
+        "description": [
+            "Seu animal de estimação desapareceu? Como amante de animais, compreendo o quão angustiante pode ser perder um companheiro de quatro patas. Estou disponível para ajudar a localizar e reunir você com seu animal de estimação perdido, utilizando métodos de investigação especializados e empatia para garantir um final feliz."
+        ]
+    }
+]
