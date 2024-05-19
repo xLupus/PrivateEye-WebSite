@@ -1,10 +1,11 @@
-import business from "../assets/audience/enterprise.webp"
+import business from "../assets/audience/company.jpg"
 import lawyer from "../assets/audience/lawyer.jpg"
+import person from "../assets/audience/person.png"
 
 export default [
     {
         "target": "Indivíduos e Famílias",
-        "poster": "https://placehold.co/350x250",
+        "poster": person,
         "description": [
             "Se você está enfrentando uma situação pessoal delicada e precisa de respostas confiáveis, oferecemos serviços discretos e profissionais para ajudá-lo a resolver seus problemas e lhes trazer clareza.",
     
@@ -14,7 +15,7 @@ export default [
 
     {
         "target": "Empresas",
-        "poster": "https://placehold.co/350x250",
+        "poster": business,
         "description": [
             "Empresas que enfrentam problemas internos, como suspeitas de fraude, roubo de propriedade intelectual ou comportamento antiético, podem confiar em nossa experiência em investigação empresarial. Nossa equipe pode ajudá-lo a proteger seus negócios e seus ativos.",
     
@@ -24,7 +25,7 @@ export default [
 
     {
         "target": "Advogados",
-        "poster": "https://placehold.co/350x250",
+        "poster": lawyer,
         "description": [
             "Advogados que necessitam de provas sólidas e admissíveis em tribunal podem contar com nossos serviços de investigação. Nossa equipe de investigadores particulares trabalha em estreita colaboração com advogados para reunir as evidências necessárias para seus casos.",
     

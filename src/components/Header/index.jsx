@@ -1,16 +1,26 @@
 import { AppBar, Button, Container, Drawer, Stack, Toolbar } from "@mui/material";
 import { List } from "@phosphor-icons/react";
 import { useState } from "react";
+import WhiteLogo from '../../assets/logo/logo-white.png'
+import BlackLogo from '../../assets/logo/logo-black.png'
 
 export function Header() {
     const [isOpened, setIsOpended]= useState(false)
+    const [colorChange, setColorchange] = useState(false);
+
+    const changeNavbarColor = () => window.scrollY >= 185 ? setColorchange(true) : setColorchange(false)
+
+    window.addEventListener("scroll", changeNavbarColor);
 
     return (
         <>
-            <AppBar component={'header'} sx={{bgcolor: 'white'}}>
-                <Toolbar sx={{color: 'black'}}>
-                    <h2>Private Eye</h2>
-                    
+            <AppBar component={'header'} 
+                color={!colorChange ? 'transparent' : undefined} 
+                sx={{bgcolor: colorChange ? 'white' : undefined}}
+            >
+                <Toolbar sx={{color: colorChange ? 'black' : 'white' }}>
+                    <img src={colorChange ? BlackLogo : WhiteLogo} alt="" height={80} /> {/* 80 */}
+
                     <Container sx={{flex: 1}} />
 
                     <Stack component={'ul'} direction={'row'} gap={2} display={{xs: 'none', md: 'flex'}} sx={{listStyle: "none"}}>
@@ -20,7 +30,7 @@ export function Header() {
                     </Stack>
 
                     <Button onClick={() => setIsOpended(true)} sx={{ display: { md: 'none'} }}>
-                        <List size={32} color="ff0000"/>
+                        <List size={32} color={colorChange ? '#000000' : "#ffffff"}/>
                     </Button>
                 </Toolbar>
 
@@ -28,9 +38,6 @@ export function Header() {
                     Navegação
                 </Drawer>
             </AppBar>
-
-            <Container sx={{height: 59}} />
         </>
-
     )
 }
