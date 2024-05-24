@@ -36,7 +36,7 @@ export const App = () => {
 
         <Box component={'main'} flex={1}  bgcolor={'#f2f2f2'}>
             {/* Jumbotron */}
-            <Stack height={800} justifyContent={'center'}  
+            <Stack height={800} justifyContent={'center'} paddingX={{xs: 2, md: 3}}
                 sx={{background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner_image})`, backgroundSize: {xs: '140% 100%', lg: '100% 100%'}, backgroundBlendMode: 'darken', backgroundRepeat: "no-repeat"}} 
             >
             <Stack alignItems={'center'} textAlign={'center'} gap={3} color={'white'}>
