@@ -32,7 +32,7 @@ export const App = () => {
     
   return (
     <Box display={'flex'} flexDirection={'column'}>
-        <Header />
+        {/* <Header /> */}
 
         <Box component={'main'} flex={1}  bgcolor={'#f2f2f2'}>
             {/* Jumbotron */}
@@ -82,16 +82,16 @@ export const App = () => {
                 </Stack>
 
                 {/* Serviços */}
-                <Stack gap={3} alignItems={'center'} paddingY={5}>
-                    <Typography variant="h5">Serviços</Typography>
+                <Stack alignItems={'center'} paddingY={5}>
+                    <Typography variant="h5" marginBottom={2}>Serviços</Typography>
 
-                    <Typography maxWidth={{xs: 1000, lg: 1100}} textAlign={'center'}>
+                    <Typography maxWidth={{xs: 1000, lg: 1100}}  marginBottom={7} textAlign={'center'}>
                         Se você precisa de serviços confiáveis e discretos de investigação particular, estamos aqui para ajudar. Oferecemos uma ampla gama de serviços para atender às suas necessidades, garantindo total confidencialidade e resultados eficazes. Confira abaixo os serviços que oferecemos:  
                     </Typography>
 
                     <Grid container columns={2} rowSpacing={3}>
                         {services.map(job => (
-                            <Grid item xs={2} md={1} padding={1}  key={job.name}>
+                            <Grid item xs={2} md={1} paddingX={{xs: 0, sm: 1, md: 2}} paddingY={{xs: 3, sm: 2, md: 3}} key={job.name}>
                                 <Card sx={{height: '100%', paddingY: 1, borderLeft: 8, borderColor: '#727272'}}  >
                                     <CardHeader title={job.name} sx={{paddingBottom: 0}}/>
                                     
@@ -102,7 +102,7 @@ export const App = () => {
                             </Grid>
                         ))}
                     </Grid>
-                </Stack>
+                </Stack>    
 
                 {/* Sobre  | Falta algo aqui | Legislação*/}
                 <Stack gap={4} alignItems={'center'} paddingY={5}>
@@ -112,36 +112,14 @@ export const App = () => {
                         <Box component={'picture'}>
                             <Box component={'source'} srcset={LogoBanner} media="(max-width: 900px)"/>
                             <Box component={'img'} srcSet={holmes} 
-                                maxWidth={{xs: '100%', md: 300}} 
-                                height={'100%'} maxHeight={{xs: 230, sm: 300, md: 400}}
+                                maxWidth={{xs: '100%', md: 350}} 
+                                height={'100%'} maxHeight={{xs: 230, sm: 300, md: 450}}
                             />
                         </Box>
 
                         <Stack gap={2}>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id tenetur laudantium a tempore laboriosam reiciendis et cum quaerat repellendus esse saepe numquam, voluptas deserunt, optio similique! Facilis ipsa voluptatem aliquid.
-                            </Typography>
-
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id tenetur laudantium a tempore laboriosam reiciendis et cum quaerat repellendus esse saepe numquam, voluptas deserunt, optio similique! Facilis ipsa voluptatem aliquid.
-                            </Typography>
-                            
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id tenetur laudantium a tempore laboriosam reiciendis et cum quaerat repellendus esse saepe numquam, voluptas deserunt, optio similique! Facilis ipsa voluptatem aliquid.
-                            </Typography>
-                            
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id tenetur laudantium a tempore laboriosam reiciendis et cum quaerat repellendus esse saepe numquam, voluptas deserunt, optio similique! Facilis ipsa voluptatem aliquid.
-                            </Typography>
+                            {info.about.map(b2 => <Typography key={b2.topic} textAlign={'justify'}>{b2.content}</Typography>)}
                         </Stack>
-                    </Stack>
-                    
-                    <Box bgcolor={'black'} >
-                        <img src={LogoBanner} alt="" width={'100%'} /> 
-                    </Box>
-
-                    <Stack gap={2} textAlign={'justify'}>
-                        {info.about.map(b2 => <Typography key={b2.topic}>{b2.content}</Typography>)}
                     </Stack>
 
                     {/* Sinto que Falta algo aqui */}
