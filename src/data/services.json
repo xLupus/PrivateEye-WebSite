@@ -12,13 +12,7 @@
             "Se você precisa encontrar um ente querido desaparecido, um devedor em fuga ou qualquer outra pessoa importante em sua vida, estou aqui para ajudar. Utilizando métodos avançados de localização e investigação, posso ajudá-lo a reunir-se com a pessoa que você procura."
         ]
     },
-    
-    {
-        "name": "Investigação Empresarial",
-        "description": [
-            "Empresários e profissionais autônomos podem confiar em meus serviços de investigação empresarial para lidar com questões internas delicadas, como fraudes, roubo de propriedade intelectual e conduta antiética. Minha abordagem discreta e profissional garante resultados eficazes e confiáveis."
-        ]
-    },
+
     
     {
         "name": "Levantamento de Informações",
@@ -28,9 +22,16 @@
     },
     
     {
-       "name":  "Provas para Advogados",
+       "name":  "Evidências para Advogados",
        "description": [
             "Advogados que necessitam de evidências sólidas e admissíveis em tribunal podem contar com meus serviços para obter as informações necessárias para seus casos. Trabalhando em estreita colaboração com advogados, posso fornecer relatórios detalhados e provas documentadas para fortalecer sua posição legal."
+        ]
+    },
+        
+    {
+        "name": "Investigação Empresarial",
+        "description": [
+            "Empresários e profissionais autônomos podem confiar em meus serviços de investigação empresarial para lidar com questões internas delicadas, como fraudes, roubo de propriedade intelectual e conduta antiética. Minha abordagem discreta e profissional garante resultados eficazes e confiáveis."
         ]
     },
     

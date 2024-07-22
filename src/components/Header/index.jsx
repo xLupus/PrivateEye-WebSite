@@ -2,7 +2,6 @@ import { AppBar, Button, Container, Drawer, Stack, Toolbar } from "@mui/material
 import { List } from "@phosphor-icons/react";
 import { useState } from "react";
 import WhiteLogo from '../../assets/logo/logo-white.png'
-import BlackLogo from '../../assets/logo/logo-black.png'
 
 export function Header() {
     const [isOpened, setIsOpended]= useState(false)
@@ -16,10 +15,14 @@ export function Header() {
         <>
             <AppBar component={'header'} 
                 color={!colorChange ? 'transparent' : undefined} 
-                sx={{bgcolor: colorChange ? 'white' : undefined}}
+                elevation={colorChange ? 5 : 0}
+                sx={{
+                    background: colorChange ? 'linear-gradient(to top, #212121 0%, rgba(22,22,24,1) 100%)' : undefined,
+                }}
+                
             >
-                <Toolbar sx={{color: colorChange ? 'black' : 'white' }}>
-                    <img src={colorChange ? BlackLogo : WhiteLogo} alt="" height={80} /> {/* 80 */}
+                <Toolbar sx={{color: 'white' }}>
+                    <img src={ WhiteLogo} alt="" height={80} /> {/* 80 */}
 
                     <Container sx={{flex: 1}} />
 
@@ -30,7 +33,7 @@ export function Header() {
                     </Stack>
 
                     <Button onClick={() => setIsOpended(true)} sx={{ display: { md: 'none'} }}>
-                        <List size={32} color={colorChange ? '#000000' : "#ffffff"}/>
+                        <List size={32} color={"#ffffff"}/>
                     </Button>
                 </Toolbar>
 
