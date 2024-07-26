@@ -7,7 +7,7 @@ import services from "./data/services.json";
 import info from "./data/info.js";
 import faq from "./data/faq.json";
 import holmes from "./assets/holmes.jpg";
-import { CaretDown, User } from "@phosphor-icons/react";
+import { BuildingOffice, CaretDown, Clock, Envelope, Phone, User } from "@phosphor-icons/react";
 import LogoBanner from "./assets/logo/logo-banner.jpg";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -67,7 +67,7 @@ export const App = () => {
                     </Stack>
                 </Stack>
 
-                <Box maxWidth={{ xs: "lg", xl: "xl" }} marginX={'auto'} paddingX={{ xs: 2, md: 3, xl: 5 }}>
+                <Box maxWidth={{ xs: "lg", xl: "xl" }} marginX={'auto'} paddingX={{ xs: 3, md: 6, xl: 12 }}>
                     {/* Publico Alvo */}
                     <Stack gap={3} alignItems={'center'} paddingBottom={5} marginTop={-8}/*  bgcolor={{xl: "green"}} */>
                         <Stack gap={{ xs: 3, xl: 4 }} direction={{ xl: "row" }}>
@@ -83,7 +83,7 @@ export const App = () => {
                                     }}
                                     viewport={{ once: true }}
                                     sx={{
-                                        maxWidth: { xs: 450, md: 1100 },
+                                        maxWidth: { xs: 450, md: 1100, xl: 450 },
                                         display: 'flex',
                                         flexDirection: { xs: 'column', md: 'row', xl: "column" },
                                         flex: 1,
@@ -99,7 +99,7 @@ export const App = () => {
                                     <Box>
                                         <CardHeader
                                             title={group.target}
-                                            titleTypographyProps={{ fontSize: 22, fontWeight: 'semibold' }}
+                                            titleTypographyProps={{ fontSize: 20, fontWeight: 500 }}
                                             sx={{ paddingBottom: 0 }}
                                         />
 
@@ -125,7 +125,7 @@ export const App = () => {
                                 <Grid
                                     item
                                     xs={2}
-                                    md={1}
+                                    lg={1}
                                     paddingX={{ xs: 0, sm: 1, md: 2 }}
                                     paddingY={{ xs: 3, sm: 2, md: 3 }}
                                     key={job.name}
@@ -135,8 +135,15 @@ export const App = () => {
                                     transition={{ delay: 0, duration: 2 }}
                                     viewport={{ once: true }}
                                 >
-                                    <Card sx={{ height: '100%', paddingY: 1, borderLeft: 8, borderColor: '#727272' }}  >
-                                        <CardHeader title={job.name} sx={{ paddingBottom: 0 }} />
+                                    <Card sx={{ height: '100%', paddingTop: 1, borderLeft: 8, borderColor: '#727272' }}  >
+                                        <CardHeader
+                                            title={job.name}
+                                            titleTypographyProps={{
+                                                fontSize: 20,
+                                                fontWeight: 500
+                                            }}
+                                            sx={{ paddingBottom: 0 }}
+                                        />
 
                                         <CardContent sx={{ fontSize: 18 }}>
                                             <Typography textAlign={'justify'}>{job.description}</Typography>
@@ -151,6 +158,7 @@ export const App = () => {
                     <Stack gap={4} alignItems={'center'} paddingY={5}>
                         <Typography variant="h5">Sobre</Typography>
 
+                        {/* Aboult */}
                         <Stack
                             flexDirection={{ md: 'row' }}
                             gap={4}
@@ -177,8 +185,8 @@ export const App = () => {
                         <Grid
                             container
                             columns={2}
-                            columnSpacing={2}
-                            marginY={3}
+                            columnSpacing={5}
+                            rowSpacing={2}
                             component={motion.div}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
@@ -192,8 +200,16 @@ export const App = () => {
                                             avatar={<User size={50} weight="fill" color="#727272" />}
                                             title={q.title}
                                             subheader={q.description}
-                                            titleTypographyProps={{ fontSize: 18 }}
-                                            subheaderTypographyProps={{ fontSize: 14, textAlign: 'justify', marginTop: 1 }}
+                                            titleTypographyProps={{
+                                                fontSize: 18,
+                                                fontWeight: 500 /* ? - Mudar */
+                                            }}
+                                            subheaderTypographyProps={{
+                                                fontSize: 16,
+                                                textAlign: 'justify',
+                                                marginTop: 1,
+                                                color: "black"
+                                            }}
                                         />
                                     </Card>
                                 </Grid>
@@ -209,7 +225,13 @@ export const App = () => {
                             transition={{ delay: 0, duration: 2 }}
                             viewport={{ once: true }}
                         >
-                            {info.law.map((paragraph, i) => <Typography key={i}>{paragraph}</Typography>)}
+                            <Typography>
+                                A <strong>Lei Nº 13432/17</strong> regulamenta a profissão de detetive particular no Brasil, estabelecendo diretrizes para a atuação ética e legal da profissão. Nossa agência opera em total conformidade com esta legislação, garantindo serviços de qualidade e respeito aos direitos de todas as partes envolvidas.
+                            </Typography>
+
+                            <Typography>
+                                Nossos serviços são conduzidos de acordo com todas as regulamentações legais aplicáveis, garantindo a legalidade e a integridade de nossas investigações.
+                            </Typography>
                         </Stack>
                     </Stack>
 
@@ -226,8 +248,21 @@ export const App = () => {
                         >
                             {faq.map(el => (
                                 <Accordion key={el.question}>
-                                    <AccordionSummary expandIcon={<CaretDown size={23} />}>{el.question}</AccordionSummary>
-                                    <AccordionDetails>{el.answer}</AccordionDetails>
+                                    <AccordionSummary
+                                        expandIcon={<CaretDown size={23} />}
+                                        sx={{
+                                            fontSize: 18,
+                                            fontWeight: 500
+                                        }}
+                                    >
+                                        {el.question}
+                                    </AccordionSummary>
+
+                                    <AccordionDetails
+                                        sx={{ fontSize: 18 }}
+                                    >
+                                        {el.answer}
+                                    </AccordionDetails>
                                 </Accordion>
                             ))}
                         </Box>
@@ -242,6 +277,7 @@ export const App = () => {
                         </Typography>
 
                         <Grid container columns={9} spacing={4}>
+                            {/* Contact Info */}
                             <Grid
                                 item
                                 xs={9}
@@ -253,24 +289,24 @@ export const App = () => {
                                 viewport={{ once: true }}
                             >
                                 <Stack gap={2}>
-                                    <Stack flexDirection={'row'}>
-                                        <Typography>Telefone:</Typography>
+                                    <Stack flexDirection={'row'} gap={1} alignItems={'center'}>
+                                        <Phone size={32} weight="fill" />
                                         <Typography>+55 (11) 12345-6789</Typography>
                                     </Stack>
 
-                                    <Stack flexDirection={'row'}>
-                                        <Typography>E-mail:</Typography>
+                                    <Stack flexDirection={'row'} gap={1} alignItems={'center'}>
+                                        <Envelope size={32} />
                                         <Typography>contato@privateeye.com</Typography>
                                     </Stack>
 
 
-                                    <Stack flexDirection={'row'}>
-                                        <Typography>Horario de Atendimento:</Typography>
-                                        <Typography>6:00 às 18:00, Segunda a Sexta</Typography>
+                                    <Stack flexDirection={'row'} gap={1} alignItems={'center'}>
+                                        <Clock size={32} />
+                                        <Typography>Atendimento das 6:00 às 18:00, Segunda a Sexta</Typography>
                                     </Stack>
 
-                                    <Stack gap={1}>
-                                        <Typography>Endereço do Escritorio:</Typography>
+                                    <Stack flexDirection={'row'} gap={1} alignItems={'center'}>
+                                        <BuildingOffice size={32} />
                                         <Typography>Baker Street, 221b - 01234-222, São Paulo - SP</Typography>
                                     </Stack>
 
@@ -287,6 +323,7 @@ export const App = () => {
                                 </Stack>
                             </Grid>
 
+                            {/* Contact Form */}
                             <Grid
                                 item
                                 xs={9}
