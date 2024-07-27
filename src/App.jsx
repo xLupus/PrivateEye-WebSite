@@ -70,7 +70,7 @@ export const App = () => {
                 <Box maxWidth={{ xs: "lg", xl: "xl" }} marginX={'auto'} paddingX={{ xs: 3, md: 6, xl: 12 }}>
                     {/* Publico Alvo */}
                     <Stack gap={3} alignItems={'center'} paddingBottom={5} marginTop={-8}/*  bgcolor={{xl: "green"}} */>
-                        <Stack gap={{ xs: 3, xl: 4 }} direction={{ xl: "row" }}>
+                        <Stack gap={{ xs: 3, xl: 4 }} direction={{ lg: "row" }}>
                             {audience.map((group, i) => (
                                 <Card
                                     key={group.target}
@@ -85,7 +85,7 @@ export const App = () => {
                                     sx={{
                                         maxWidth: { xs: 450, md: 1100, xl: 450 },
                                         display: 'flex',
-                                        flexDirection: { xs: 'column', md: 'row', xl: "column" },
+                                        flexDirection: { xs: 'column', md: 'row', lg: "column" },
                                         flex: 1,
                                         borderRadius: 2
                                     }}
@@ -93,7 +93,10 @@ export const App = () => {
                                     <CardMedia
                                         component={'img'}
                                         image={group.poster}
-                                        sx={{ height: 300, alignSelf: 'center' }}
+                                        sx={{
+                                            height: { xs: 300, lg: 250, xl: 280 },
+                                            alignSelf: 'center'
+                                        }}
                                     />
 
                                     <Box>
@@ -120,14 +123,12 @@ export const App = () => {
                             Se você precisa de serviços confiáveis e discretos de investigação particular, estamos aqui para ajudar. Oferecemos uma ampla gama de serviços para atender às suas necessidades, garantindo total confidencialidade e resultados eficazes. Confira abaixo os serviços que oferecemos:
                         </Typography>
 
-                        <Grid container columns={2} rowSpacing={3}>
+                        <Grid container columns={2} rowSpacing={{ xs: 3, lg: 4 }} columnSpacing={3}>
                             {services.map(job => (
                                 <Grid
                                     item
                                     xs={2}
                                     lg={1}
-                                    paddingX={{ xs: 0, sm: 1, md: 2 }}
-                                    paddingY={{ xs: 3, sm: 2, md: 3 }}
                                     key={job.name}
                                     component={motion.div}
                                     initial={{ opacity: 0 }}
@@ -185,8 +186,8 @@ export const App = () => {
                         <Grid
                             container
                             columns={2}
-                            columnSpacing={5}
-                            rowSpacing={2}
+                            columnSpacing={3}
+                            rowSpacing={1}
                             component={motion.div}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
