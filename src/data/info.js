@@ -31,12 +31,6 @@ export default {
         }
     ],
 
-    law: [
-        "A Lei Nº 13432/17 regulamenta a profissão de detetive particular no Brasil, estabelecendo diretrizes para a atuação ética e legal da profissão. Nossa agência opera em total conformidade com esta legislação, garantindo serviços de qualidade e respeito aos direitos de todas as partes envolvidas.",
-
-        "Nossos serviços são conduzidos de acordo com todas as regulamentações legais aplicáveis, garantindo a legalidade e a integridade de nossas investigações."
-    ],
-
     whyus: [
         {
             title: "Discrição Absoluta",
