@@ -48,8 +48,8 @@ export default {
         },
 
         {
-            title: "Lorem Ipsum",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id tenetur laudantium a tempore laboriosam reiciendis et cum quaerat repellendus esse saepe numquam, voluptas deserunt."
+            title: "Imparcialidade",
+            description: "Conduzimos investigações de maneira objetiva e imparcial, sem preconceitos ou favoritismos."
         },
 
         {
