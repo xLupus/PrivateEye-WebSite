@@ -1,12 +1,12 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, CardHeader, CardMedia, Dialog, FormControl, FormControlLabel, FormLabel, Grid, Input, InputLabel, MenuItem, Radio, RadioGroup, Select, Stack, Typography } from "@mui/material";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-import banner_image from "./assets/banner.jpg";
+import banner_image from "./assets/banner.webp";
 import audience from "./data/audience.js";
 import services from "./data/services.json";
 import info from "./data/info.js";
 import faq from "./data/faq.json";
-import holmes from "./assets/holmes.jpg";
+import holmes from "./assets/holmes.webp";
 import { BuildingOffice, CaretDown, Clock, Envelope, Phone, User } from "@phosphor-icons/react";
 import LogoBanner from "./assets/logo/logo-banner.jpg";
 import { useForm } from "react-hook-form";
@@ -296,7 +296,7 @@ export const App = () => {
                                             <Typography>Baker Street, 221b - 01234-222, São Paulo - SP</Typography>
                                         </Stack>
 
-                                        <img src="https://placehold.co/1000x600" alt="" />
+                                        <img src="https://placehold.co/1000x600?text=Mapa+com+Localizacao" alt="" />
                                     </Stack>
                                 </Grid>
 

@@ -1,6 +1,6 @@
-import business from "../assets/audience/company.jpg"
-import lawyer from "../assets/audience/lawyer.jpg"
-import person from "../assets/audience/person.png"
+import business from "../assets/audience/company.webp"
+import lawyer from "../assets/audience/lawyer.webp"
+import person from "../assets/audience/person.webp"
 
 export default [
     {
