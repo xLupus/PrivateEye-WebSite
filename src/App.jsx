@@ -172,21 +172,30 @@ export const App = () => {
                             <Stack
                                 flexDirection={{ md: 'row' }}
                                 gap={4}
-                                component={motion.div}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ delay: 0, duration: 2 }}
-                                viewport={{ once: true }}
                             >
-                                <Box component={'picture'}>
-                                    <Box component={'source'} srcset={LogoBanner} media="(max-width: 900px)" />
-                                    <Box component={'img'} srcSet={holmes}
-                                        maxWidth={{ xs: '100%', md: 350 }}
-                                        height={'100%'} maxHeight={{ xs: 230, sm: 300, md: 450 }}
-                                    />
+                                <Box
+                                    component={motion.div}
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ delay: 0, duration: 3 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Box component={'picture'}>
+                                        <Box component={'source'} srcset={LogoBanner} media="(max-width: 900px)" />
+                                        <Box component={'img'} srcSet={holmes}
+                                            maxWidth={{ xs: '100%', md: 350 }}
+                                            height={'100%'} maxHeight={{ xs: 230, sm: 300, md: 450 }}
+                                        />
+                                    </Box>
                                 </Box>
 
-                                <Stack gap={2}>
+                                <Stack gap={2}
+                                    component={motion.div}
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    transition={{ delay: .3 , duration: 2 }}
+                                    viewport={{ once: true }}
+                                >
                                     {info.about.map(b2 => <Typography key={b2.topic} textAlign={'justify'}>{b2.content}</Typography>)}
                                 </Stack>
                             </Stack>
