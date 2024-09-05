@@ -73,6 +73,10 @@ export const App = () => {
                             <Typography maxWidth={'lg'}>
                                 Com expertise e confidencialidade, solucionamos seus mistérios e garantimos a segurança das suas informações. Confie na nossa experiência para revelar o que está oculto e trazer clareza às situações mais complexas. Seja em casos pessoais ou corporativos, estamos aqui para ajudar você a encontrar respostas.
                             </Typography>
+
+                            <Button variant="contained">
+                                Entre em contato
+                            </Button>
                         </Stack>
                     </Stack>
 
